@@ -1,1 +1,1 @@
-# LoanPredictor-ML-WebApp
+# Loan Approval Predictor-ML-WebApp
