@@ -1,0 +1,41 @@
+html {
+    font-family: 'Tilt Neon', Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #494e53;
+}
+
+.logo {
+    width: 10rem;
+    height: 10rem;
+    padding: 0.5rem;
+}
+
+.logo-image {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    gap: 30rem;
+    align-items: center;
+    width: 100%;
+    background-color: #10A35E;
+    border-radius: 2rem;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 5rem;
+}
