@@ -66,4 +66,5 @@ a:hover {
 .end-icons i:hover {
     color: green !important;
     border-radius: 50%;
+    cursor: pointer;
 }
