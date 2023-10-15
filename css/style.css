@@ -15,9 +15,8 @@ body {
     flex-wrap: wrap;
     gap: 20rem;
     align-items: center;
-    width: 100%;
-    background-color: #10A35E;
-    border-radius: 2.5rem;
+    margin: 1rem;
+    border-bottom: 1px solid #e9e9ea;
 }
 
 .logo img {
