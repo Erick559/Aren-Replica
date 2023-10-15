@@ -63,6 +63,7 @@ a:hover {
     margin-left: auto;
 }
 
-.end-icons i {
-    width: 5rem;
+.end-icons i:hover {
+    color: green !important;
+    border-radius: 50%;
 }
