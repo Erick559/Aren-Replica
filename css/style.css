@@ -10,10 +10,46 @@ body {
     min-height: 100vh;
 }
 
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20rem;
+    align-items: center;
+    width: 100%;
+    background-color: #10A35E;
+    border-radius: 2.5rem;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 5rem;
+    width: 60rem;
+}
+
 a {
+    text-align: center;
+    width: 15rem;
     font-size: 2rem;
     text-decoration: none;
     color: #494e53;
+    transition: 0.4s;
+}
+
+.nav-link span {
+    visibility: hidden
+}
+
+.nav-link:hover span {
+    visibility: visible;
+}
+
+a:hover {
+    padding: 0.4rem;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 2.5rem;
+    font-weight: 700;
+    overflow: hidden;
 }
 
 .logo {
@@ -24,18 +60,4 @@ a {
 
 .logo-image {
     width: 100%;
-}
-
-.header {
-    display: flex;
-    gap: 30rem;
-    align-items: center;
-    width: 100%;
-    background-color: #10A35E;
-    border-radius: 2rem;
-}
-
-.nav-bar {
-    display: flex;
-    gap: 5rem;
 }
