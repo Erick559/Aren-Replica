@@ -31,7 +31,6 @@ body {
 }
 
 a {
-    text-align: center;
     width: 15rem;
     font-size: 2rem;
     text-decoration: none;
@@ -44,13 +43,14 @@ a {
 }
 
 .nav-link:hover span {
+    margin-left: 2.5rem;
     visibility: visible;
 }
 
 a:hover {
     padding: 0.4rem;
     color: black;
-    background-color: whitesmoke;
+    background-color: green;
     border-radius: 2.5rem;
     font-weight: 700;
     overflow: hidden;
