@@ -55,3 +55,14 @@ a:hover {
     margin-left: 2.5rem;
     visibility: visible;
 }
+
+.end-icons {
+    display: flex;
+    gap: 3rem;
+    width: 10rem;
+    margin-left: auto;
+}
+
+.end-icons i {
+    width: 5rem;
+}
