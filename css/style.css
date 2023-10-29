@@ -35,14 +35,16 @@ a {
     font-size: 2rem;
     text-decoration: none;
     color: #494e53;
-    transition: 0.4s;
+    transition: 0.1s;
 }
 
 a:hover {
+    align-items: center;
     padding: 0.5rem;
     color: black;
-    background-color: green;
-    border-radius: 2.5rem;
+    /* background-color: green; */
+    border-bottom: green 3px solid;
+    /* border-radius: 2.5rem; */
     font-weight: 700;
     overflow: hidden;
 }
