@@ -8,7 +8,6 @@ html {
 
 body {
     min-height: 100vh;
-    background: #d9d9e0;
 }
 
 .header {
@@ -68,4 +67,23 @@ a:hover {
     color: green !important;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.container {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: 1000px;
+}
+
+.banner-info {
+    height: 800px;
+    width: 700px;
+    background: #4FE3C1;
+}
+
+.banner-info img {
+    width: 750px;
+    height: 450px;
 }
