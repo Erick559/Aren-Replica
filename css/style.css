@@ -95,10 +95,17 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom:60px;
 }
 
-.content h1{
+.content .header{
     font-size:80px;
     color:white;
+    font-weight:700;
+}
+
+.content .text{
+    font-size:26px;
+    color:#FFF5E0;
     font-weight:700;
 }
