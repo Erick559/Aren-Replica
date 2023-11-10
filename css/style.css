@@ -110,3 +110,22 @@ a:hover {
     color:#49597A;
     font-weight:700;
 }
+.form{
+    width:50rem;
+}
+.amount{
+    display:flex;
+    flex-wrap: wrap;
+    width: 30rem;
+}
+
+.amount input{
+   width:10rem;
+   margin-right: 1rem;
+   margin-bottom: 1rem;
+}
+
+.amount-pair{
+    display: flex;
+    flex-direction: column;
+}
