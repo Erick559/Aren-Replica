@@ -81,6 +81,8 @@ a:hover {
     height: 800px;
     width: 700px;
     background: #4FE3C1;
+    padding:40px;
+
 }
 
 .banner-info img {
@@ -96,6 +98,7 @@ a:hover {
 }
 
 .content h1{
-    font-size: 40px;
-    font-weight:bolder;
+    font-size:80px;
+    color:white;
+    font-weight:700;
 }
