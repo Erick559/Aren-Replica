@@ -87,3 +87,15 @@ a:hover {
     width: 750px;
     height: 450px;
 }
+
+.content{
+    height:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content h1{
+    font-size: 40px;
+    font-weight:bolder;
+}
