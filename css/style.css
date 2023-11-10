@@ -78,16 +78,16 @@ a:hover {
 }
 
 .banner-info {
-    height: 800px;
+    border-radius: 25px 0 0 25px;
+    height: 730px;
     width: 700px;
     background: #4FE3C1;
     padding:40px;
-
 }
 
 .banner-info img {
-    width: 750px;
-    height: 450px;
+    width: 690px;
+    height: 390px;
 }
 
 .content{
@@ -98,14 +98,15 @@ a:hover {
     margin-bottom:60px;
 }
 
-.content .header{
+.content .text-header{
     font-size:80px;
     color:white;
     font-weight:700;
+    margin:0;
 }
 
 .content .text{
     font-size:26px;
-    color:#FFF5E0;
+    color:#49597A;
     font-weight:700;
 }
