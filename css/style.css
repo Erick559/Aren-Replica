@@ -111,21 +111,94 @@ a:hover {
     font-weight:700;
 }
 .form{
-    width:50rem;
+    height:73rem;
+    width:70rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
 }
+
+.form-header{
+    width:45rem;
+}
+
+.form-header .text-header{
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom: 4px solid green;
+}
+
+.form-header .text-content{
+    font-size: 17px;
+}
+
 .amount{
     display:flex;
     flex-wrap: wrap;
-    width: 30rem;
+    width: 45rem;
 }
 
 .amount input{
-   width:10rem;
-   margin-right: 1rem;
-   margin-bottom: 1rem;
+   width:18rem;
+   height:3.2rem;
+   border: 1px solid grey;
+   margin-right: 1.5rem;
+   margin-bottom: 1.5rem;
+}
+
+label{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color:#494e53
 }
 
 .amount-pair{
     display: flex;
     flex-direction: column;
+}
+
+.disability{
+    display: flex;
+    align-items: center;
+    width:45rem;
+}
+.disability label{
+    margin-right: 2rem;
+}
+
+input.disability-check{
+    width:2rem;
+    height:2rem;
+    accent-color:#4FE3C1;
+}
+
+.nssf{
+    height:2rem;
+    display: flex;
+    align-items: center;
+    width:45rem;
+}
+
+.nssf input{
+    height:1.3rem;
+    width: 1.3rem;
+    margin-right:5rem;
+}
+
+.nssf label{
+    margin-right:2rem;
+}
+.buttons{
+    width: 45rem;
+    margin-top:4rem;;
+}
+
+button{
+    width:20rem;
+    height:4rem;
+    margin-right:2rem;
+    background: #4FE3C1;
+    font-size:1.5rem;
 }
