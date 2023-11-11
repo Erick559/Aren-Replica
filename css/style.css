@@ -78,11 +78,14 @@ a:hover {
 }
 
 .banner-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
     border-radius: 25px 0 0 25px;
-    height: 730px;
+    height: 900px;
     width: 700px;
     background: #4FE3C1;
-    padding:40px;
+    padding: 40px;
 }
 
 .banner-info img {
@@ -90,115 +93,121 @@ a:hover {
     height: 390px;
 }
 
-.content{
-    height:300px;
+.content {
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom:60px;
+    margin-bottom: 60px;
 }
 
-.content .text-header{
-    font-size:80px;
-    color:white;
-    font-weight:700;
-    margin:0;
+.content .text-header {
+    font-size: 80px;
+    color: white;
+    font-weight: 700;
+    margin: 0;
 }
 
-.content .text{
-    font-size:26px;
-    color:#49597A;
-    font-weight:700;
+.content .text {
+    font-size: 26px;
+    color: #49597A;
+    font-weight: 700;
 }
-.form{
-    height:73rem;
-    width:70rem;
+
+.form {
+    height: 73rem;
+    width: 70rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:1rem;
+    gap: 1rem;
 }
 
-.form-header{
-    width:45rem;
+.form-header {
+    width: 50rem;
 }
 
-.form-header .text-header{
+.form-header .text-header {
     font-size: 22px;
     font-weight: 600;
     border-bottom: 4px solid green;
 }
 
-.form-header .text-content{
-    font-size: 17px;
+.form-header .text-content {
+    font-size: 19px;
 }
 
-.amount{
-    display:flex;
+.amount {
+    display: flex;
     flex-wrap: wrap;
-    width: 45rem;
+    width: 50rem;
 }
 
-.amount input{
-   width:18rem;
-   height:3.2rem;
-   border: 1px solid grey;
-   margin-right: 1.5rem;
-   margin-bottom: 1.5rem;
+.amount input {
+    width: 22rem;
+    height: 3.2rem;
+    border: 3px solid #E7E8EC;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
-label{
-    font-size: 1.25rem;
+label {
+    font-size: 1.5rem;
     font-weight: 600;
-    color:#494e53
+    color: #494e53
 }
 
-.amount-pair{
+.amount-pair {
     display: flex;
     flex-direction: column;
 }
 
-.disability{
+.disability {
     display: flex;
     align-items: center;
-    width:45rem;
+    width: 50rem;
 }
-.disability label{
+
+.disability label {
     margin-right: 2rem;
 }
 
-input.disability-check{
-    width:2rem;
-    height:2rem;
-    accent-color:#4FE3C1;
+input.disability-check {
+    width: 2rem;
+    height: 2rem;
+    accent-color: #4FE3C1;
 }
 
-.nssf{
-    height:2rem;
+.nssf {
+    height: 2rem;
     display: flex;
     align-items: center;
-    width:45rem;
+    width: 50rem;
 }
 
-.nssf input{
-    height:1.3rem;
+.nssf input {
+    height: 1.3rem;
     width: 1.3rem;
-    margin-right:5rem;
+    margin-right: 5rem;
 }
 
-.nssf label{
-    margin-right:2rem;
+.nssf label {
+    margin-right: 2rem;
 }
-.buttons{
+
+.buttons {
     width: 45rem;
-    margin-top:4rem;;
+    margin-top: 4rem;
+    ;
 }
 
-button{
-    width:20rem;
-    height:4rem;
-    margin-right:2rem;
+button {
+    width: 20rem;
+    height: 4rem;
+    margin-right: 2rem;
     background: #4FE3C1;
-    font-size:1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
 }
