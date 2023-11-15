@@ -1,5 +1,8 @@
 const grossPay = document.querySelector('.gross-pay')
 const calculate = document.querySelector('.submit')
+const resetSelection = document.querySelector('.reset-checkbox')
+form = document.querySelector('.form')
+
 
 function calculateLevy(){
     let housingLevy = 0.015 * grossPay.value
@@ -65,10 +68,40 @@ function calculateNHIF(){
     return nhif;
 }
 
+function calculateNSSF(){
+    let nssfTier1 = document.querySelector('.nssf-tier1');
+    let nssfTier1_2 = document.querySelector('.nssf-tier1-2')
+    let nssf;
+
+    let error = document.createElement('p')
+    error.classList.add('error')
+
+    if(nssfTier1.checked == true && nssfTier1_2.checked == true){
+        error.innerHTML = 'Please select only one'
+    }
+    else if(nssfTier1.checked){
+        nssf = 360;
+    }
+    else if (nssfTier1_2.checked){
+        nssf = 1080;
+    }
+    else{
+        error.innerHTML = 'Select one of the two tiers'
+    }
+
+    resetSelection.addEventListener('click',function(){
+        document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false)
+    })
+
+    form.appendChild(error);
+    return nssf
+}
+
 calculate.addEventListener('click', function(){
     let deductableLevy = calculateLevy()
     let netPay = grossPay.value - deductableLevy
 
     console.log(netPay)
     console.log(calculateNHIF())
+    console.log(calculateNSSF())
 } )
