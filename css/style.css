@@ -167,6 +167,7 @@ label {
     display: flex;
     align-items: center;
     width: 50rem;
+    margin-bottom: 4rem;
 }
 
 .disability label {
@@ -196,10 +197,15 @@ input.disability-check {
     margin-right: 2rem;
 }
 
+.reset-checkbox{
+    width:10rem;
+    background:#E7E8EC;
+    color:black;
+}
+
 .buttons {
-    width: 45rem;
+    width: 50rem;
     margin-top: 4rem;
-    ;
 }
 
 button {
