@@ -72,12 +72,15 @@ function calculateNSSF(){
     let nssfTier1 = document.querySelector('.nssf-tier1');
     let nssfTier1_2 = document.querySelector('.nssf-tier1-2')
     let nssf;
-
-    let error = document.createElement('p')
-    error.classList.add('error')
-
+    let error = document.querySelector('.error')
+    if(!error){
+        error = document.createElement('p')
+        error.classList.add('error')
+    }
+    
     if(nssfTier1.checked == true && nssfTier1_2.checked == true){
         error.innerHTML = 'Please select only one'
+        form.appendChild(error);
     }
     else if(nssfTier1.checked){
         nssf = 360;
@@ -87,17 +90,52 @@ function calculateNSSF(){
     }
     else{
         error.innerHTML = 'Select one of the two tiers'
+        form.appendChild(error);
     }
 
     resetSelection.addEventListener('click',function(){
         document.querySelectorAll('input[type="radio"]').forEach(input => input.checked = false)
     })
 
-    form.appendChild(error);
+    
     return nssf
 }
 
 function calculateIncomeTax(){
+    let nssfDeductable = calculateNSSF()
+    let taxableIncome = grossPay.value - nssfDeductable
+    let nhifRelief = calculateNHIF() * 0.15
+
+    let tax = 0;
+
+    if (taxableIncome <= 24000) {
+      tax = taxableIncome * 0.10;
+    } else if (taxableIncome <= 32333) {
+      tax = 24000 * 0.10 + (taxableIncome - 24000) * 0.25;
+    } else if (taxableIncome <= 500000) {
+      tax = 24000 * 0.10 + 8333 * 0.25 + (taxableIncome - 32333) * 0.30;
+    } else if (taxableIncome <= 800000) {
+      tax =
+        24000 * 0.10 +
+        8333 * 0.25 +
+        467667 * 0.30 +
+        (taxableIncome - 500000) * 0.325;
+    } else {
+      tax =
+        24000 * 0.10 +
+        8333 * 0.25 +
+        467667 * 0.30 +
+        300000 * 0.325 +
+        (taxableIncome - 800000) * 0.35;
+    }
+  
+    // Subtract personal relief
+    tax -= (2400 + nhifRelief);
+  
+    // Ensure tax is non-negative
+    tax = Math.max(tax, 0);
+    
+    return tax.toFixed(2)
     
 }
 
@@ -108,4 +146,5 @@ calculate.addEventListener('click', function(){
     console.log(netPay)
     console.log(calculateNHIF())
     console.log(calculateNSSF())
+    console.log(calculateIncomeTax())
 } )
