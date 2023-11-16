@@ -97,6 +97,10 @@ function calculateNSSF(){
     return nssf
 }
 
+function calculateIncomeTax(){
+    
+}
+
 calculate.addEventListener('click', function(){
     let deductableLevy = calculateLevy()
     let netPay = grossPay.value - deductableLevy
