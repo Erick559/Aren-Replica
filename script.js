@@ -139,12 +139,27 @@ function calculateIncomeTax(){
     
 }
 
-calculate.addEventListener('click', function(){
-    let deductableLevy = calculateLevy()
-    let netPay = grossPay.value - deductableLevy
+function calculateNetPay(){
+    let incomeTax = parseFloat(calculateIncomeTax());
+    let deductableNSSF = parseFloat(calculateNSSF());
+    let deductableNHIF = parseFloat(calculateNHIF());
+    let deductableLevy = parseFloat(calculateLevy());
 
-    console.log(netPay)
-    console.log(calculateNHIF())
-    console.log(calculateNSSF())
-    console.log(calculateIncomeTax())
+    let totalDeductions = incomeTax + deductableLevy + deductableNSSF + deductableNHIF
+
+    let netPay = grossPay.value - totalDeductions 
+    
+    return netPay
+}
+
+calculate.addEventListener('click', function(){
+    // let deductableLevy = calculateLevy()
+    // let netPay = grossPay.value - deductableLevy
+
+    // console.log(netPay)
+    // console.log(calculateNHIF())
+    // console.log(calculateNSSF())
+    // console.log(calculateIncomeTax())
+    console.log(calculateNetPay())
 } )
+
