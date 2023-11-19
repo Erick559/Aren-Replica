@@ -1,5 +1,6 @@
 const grossPay = document.querySelector('.gross-pay')
 const calculate = document.querySelector('.submit')
+const reset = document.querySelector('.reset')
 const resetSelection = document.querySelector('.reset-checkbox')
 const form = document.querySelector('.form')
 const formDetails = document.querySelector('.form-details')
@@ -151,7 +152,9 @@ function disabilityCheck() {
 function appendResults() {
     let displayedGrossPay = parseFloat(grossPay.value)
 
-    let results = document.createElement('div')
+
+    let results = document.querySelector('.form-results')
+    results = document.createElement('div')
     results.classList.add('form-results')
     formDetails.appendChild(results)
 
@@ -215,4 +218,19 @@ function appendResults() {
     results.append(grossPayDiv, nssfDiv, incomeTaxDiv, nhifDiv, housingLevyDiv, netPayDiv)
 }
 
-calculate.addEventListener('click', appendResults)
+calculate.addEventListener('click', function() {
+    // Check if the results are already present
+    let results = document.querySelector('.form-results');
+
+    if (!results) {
+        // If results are not present, append them
+        appendResults();
+    } else {
+        // If results are already present, you may choose to update them or do nothing
+        console.log('Results are already displayed.');
+    }
+})
+
+reset.addEventListener('click', function() {
+    grossPay.value = 0
+})
