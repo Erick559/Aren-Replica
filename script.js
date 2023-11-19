@@ -113,6 +113,10 @@ function calculateIncomeTax() {
     // Subtract personal relief
     tax -= (2400 + nhifRelief);
 
+    if (disabilityCheck() && grossPay.value <= 150000) {
+        tax = 0;
+    }
+
     // Ensure tax is non-negative
     tax = Math.max(tax, 0);
 
