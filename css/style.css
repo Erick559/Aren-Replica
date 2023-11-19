@@ -231,7 +231,7 @@ button {
     font-family: 'Montserrat';
     font-size: 1.5rem;
     font-weight: 600;
-    width: 30rem;
+    width: 35rem;
     margin-top: 4rem;
     border: 1px solid #E7E8EC;
     border-radius: 15px;
@@ -246,5 +246,25 @@ button {
 .net-pay-result {
     display: flex;
     justify-content: space-between;
-    width: 30rem;
+    width: 35rem;
+}
+
+.gross-pay-title,
+.nssf-result-title,
+.income-tax-title,
+.nhif-result-title,
+.housing-Levy-title,
+.net-pay-title {
+    border-right: 4px solid #E7E8EC;
+    width: 20rem
+}
+
+.net-pay-value {
+    color: #4FE3C1;
+    border-bottom: 3px solid #4FE3C1;
+}
+
+.net-pay-value,
+.net-pay-title {
+    font-size: 2rem;
 }
