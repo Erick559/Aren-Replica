@@ -6,14 +6,18 @@ const form = document.querySelector('.form')
 const formDetails = document.querySelector('.form-details')
 
 
+function getGrossPay() {
+    return parseFloat(grossPay.value)
+}
 
 function calculateLevy() {
-    let housingLevy = 0.015 * grossPay.value
+    let income = getGrossPay()
+    let housingLevy = 0.015 * income
     return housingLevy
 }
 
 function calculateNHIF() {
-    let basePay = grossPay.value
+    let basePay = getGrossPay()
     let nhif;
 
     if (basePay <= 5999) {
@@ -87,7 +91,7 @@ function calculateNSSF() {
 
 function calculateIncomeTax() {
     let nssfDeductable = calculateNSSF()
-    let taxableIncome = grossPay.value - nssfDeductable
+    let taxableIncome = getGrossPay() - nssfDeductable
     let nhifRelief = calculateNHIF() * 0.15
 
     let tax = 0;
@@ -135,7 +139,7 @@ function calculateNetPay() {
 
     let totalDeductions = incomeTax + deductableLevy + deductableNSSF + deductableNHIF
 
-    let netPay = grossPay.value - totalDeductions
+    let netPay = getGrossPay() - totalDeductions
 
     return netPay
 }
@@ -233,4 +237,10 @@ calculate.addEventListener('click', function() {
 
 reset.addEventListener('click', function() {
     grossPay.value = 0
+
+    let results = document.querySelector('.form-results')
+
+    if (results) {
+        results.remove()
+    }
 })
