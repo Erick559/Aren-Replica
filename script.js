@@ -155,32 +155,57 @@ function appendResults() {
     results.classList.add('form-results')
     formDetails.appendChild(results)
 
-    let grossPayResult = document.createElement('div')
-    grossPayResult.classList.add('gross-pay-result')
+    let grossPayDiv = document.createElement('div')
+    grossPayDiv.classList.add('gross-pay-result')
+    let grossPayResult = document.createElement('p')
+    let grossPayTitle = document.createElement('p')
+    grossPayDiv.append(grossPayTitle, grossPayResult)
 
-    let nssfResult = document.createElement('div')
-    nssfResult.classList.add('nssf-result')
+    let nssfDiv = document.createElement('div')
+    nssfDiv.classList.add('nssf-result')
+    let nssfResult = document.createElement('p')
+    let nssfTitle = document.createElement('p')
+    nssfDiv.append(nssfTitle, nssfResult)
 
-    let incomeTaxResult = document.createElement('div')
-    incomeTaxResult.classList.add('income-tax-result')
+    let incomeTaxDiv = document.createElement('div')
+    incomeTaxDiv.classList.add('income-tax-result')
+    let incomeTaxResult = document.createElement('p')
+    let incomeTaxTitle = document.createElement('p')
+    incomeTaxDiv.append(incomeTaxTitle, incomeTaxResult)
 
-    let nhifResult = document.createElement('div')
-    nhifResult.classList.add('nhif-result')
+    let nhifDiv = document.createElement('div')
+    nhifDiv.classList.add('nhif-result')
+    let nhifResult = document.createElement('p')
+    let nhifTitle = document.createElement('p')
+    nhifDiv.appendChild(nhifTitle, nhifResult)
 
-    let housingLevyResult = document.createElement('div')
-    housingLevyResult.classList.add('housing-Levy-result')
+    let housingLevyDiv = document.createElement('div')
+    housingLevyDiv.classList.add('housing-Levy-result')
+    let housingLevyResult = document.createElement('p')
+    let housingLevyTitle = document.createElement('p')
+    housingLevyDiv.append(housingLevyTitle, housingLevyResult)
 
-    let netPayResult = document.createElement('div')
-    netPayResult.classList.add('net-pay-result')
+    let netPayDiv = document.createElement('div')
+    netPayDiv.classList.add('net-pay-result')
+    let netPayResult = document.createElement('p')
+    let netPayTitle = document.createElement('p')
+    netPayDiv.append(netPayTitle, netPayResult)
 
-    grossPayResult.innerHTML = `GROSS-PAY ${displayedGrossPay.toLocaleString()}`
-    nssfResult.innerHTML = `NSSF -${calculateNSSF().toLocaleString()}`
-    incomeTaxResult.innerHTML = `INCOME TAX -${calculateIncomeTax().toLocaleString()}`
-    nhifResult.innerHTML = `NHIF -${calculateNHIF().toLocaleString()}`
-    housingLevyResult.innerHTML = `HOUSING LEVY -${calculateLevy().toLocaleString()}`
-    netPayResult.innerHTML = `NET PAY ${calculateNetPay().toLocaleString()}`
+    grossPayTitle.innerHTML = 'GROSS-PAY '
+    nssfTitle.innerHTML = 'NSSF'
+    incomeTaxTitle.innerHTML = 'INCOME TAX'
+    nhifTitle.innerHTML = 'NHIF'
+    housingLevyTitle.innerHTML = 'HOUSING LEVY'
+    netPayTitle.innerHTML = 'NET PAY'
 
-    results.append(grossPayResult, nssfResult, incomeTaxResult, nhifResult, housingLevyResult, netPayResult)
+    grossPayResult.innerHTML = `${displayedGrossPay.toLocaleString()}`
+    nssfResult.innerHTML = `-${calculateNSSF().toLocaleString()}`
+    incomeTaxResult.innerHTML = `-${calculateIncomeTax().toLocaleString()}`
+    nhifResult.innerHTML = `-${calculateNHIF().toLocaleString()}`
+    housingLevyResult.innerHTML = `-${calculateLevy().toLocaleString()}`
+    netPayResult.innerHTML = `${calculateNetPay().toLocaleString()}`
+
+    results.append(grossPayDiv, nssfDiv, incomeTaxDiv, nhifDiv, housingLevyDiv, netPayDiv)
 }
 
 calculate.addEventListener('click', appendResults)
