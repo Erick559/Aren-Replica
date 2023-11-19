@@ -45,37 +45,41 @@
                 <p class="text-header">How Much Tax Will I Pay?</p>
                 <p class="text-content">Enter Your Details:</p>
             </div>
-            <form class="amount">
-                <div class="amount-pair">
-                    <label for="gross-pay">Gross Pay</label>
-                    <input type="text" class="gross-pay" value="0">
-                </div>
-                <div class="amount-pair">
-                    <label for="gross-pay">Non-Cash Benefits</label>
-                    <input type="text" class="gross-pay" value="0">
-                </div>
-                <div class="amount-pair">
-                    <label for="gross-pay">Pension Contribution</label>
-                    <input type="text" class="gross-pay" value="0">
-                </div>
-                <div class="amount-pair">
-                    <label for="gross-pay">Other Allowable Deductions</label>
-                    <input type="text" class="gross-pay" value="0">
-                </div>
-            </form>
-            <form class="disability">
-                <label for="disability-check">Living With A Disablity</label>
-                <input type="checkbox" class="disability-check">
-            </form>
-            <form class="nssf">
-                <label for="nssf-tier1">NSSF-Tier 1 Only</label>
-                <input type="radio" class="nssf-tier1">
 
-                <label for="nssf-tier1">NSSF-Tier 1&2</label>
-                <input type="radio" class="nssf-tier1-2" checked>
+            <div class="form-details">
+                <form class="amount">
+                    <div class="amount-pair">
+                        <label for="gross-pay">Gross Pay</label>
+                        <input type="text" class="gross-pay" value="0">
+                    </div>
+                    <div class="amount-pair">
+                        <label for="gross-pay">Non-Cash Benefits</label>
+                        <input type="text" class="gross-pay" value="0">
+                    </div>
+                    <div class="amount-pair">
+                        <label for="gross-pay">Pension Contribution</label>
+                        <input type="text" class="gross-pay" value="0">
+                    </div>
+                    <div class="amount-pair">
+                        <label for="gross-pay">Other Allowable Deductions</label>
+                        <input type="text" class="gross-pay" value="0">
+                    </div>
+                </form>
+                <form class="disability">
+                    <label for="disability-check">Living With A Disablity</label>
+                    <input type="checkbox" class="disability-check">
+                </form>
+                <form class="nssf">
+                    <label for="nssf-tier1">NSSF-Tier 1 Only</label>
+                    <input type="radio" class="nssf-tier1">
 
-                <button class="reset-checkbox">Clear</button>
-            </form>
+                    <label for="nssf-tier1">NSSF-Tier 1&2</label>
+                    <input type="radio" class="nssf-tier1-2" checked>
+
+                    <button class="reset-checkbox">Clear</button>
+                </form>
+            </div>
+
             <div class="buttons">
                 <button class="reset">Reset</button>
                 <button class="submit">Calculate</button>
