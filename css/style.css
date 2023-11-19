@@ -115,7 +115,7 @@ a:hover {
 }
 
 .form {
-    height: 73rem;
+    height: 90rem;
     width: 70rem;
     display: flex;
     flex-direction: column;
@@ -197,10 +197,10 @@ input.disability-check {
     margin-right: 2rem;
 }
 
-.reset-checkbox{
-    width:10rem;
-    background:#E7E8EC;
-    color:black;
+.reset-checkbox {
+    width: 10rem;
+    background: #E7E8EC;
+    color: black;
 }
 
 .buttons {
@@ -218,9 +218,33 @@ button {
     cursor: pointer;
 }
 
-.error{
+.error {
     font-family: 'Montserrat';
-    color:red;
+    color: red;
     font-size: 2rem;
     font-weight: 700;
+}
+
+.form-results {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 30rem;
+    margin-top: 4rem;
+    border: 1px solid #E7E8EC;
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+.gross-pay-result,
+.nssf-result,
+.income-tax-result,
+.nhif-result,
+.housing-Levy-result,
+.net-pay-result {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
 }
