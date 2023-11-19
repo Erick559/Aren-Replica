@@ -1,7 +1,9 @@
 const grossPay = document.querySelector('.gross-pay')
 const calculate = document.querySelector('.submit')
 const resetSelection = document.querySelector('.reset-checkbox')
-form = document.querySelector('.form')
+const form = document.querySelector('.form')
+const formDetails = document.querySelector('.form-details')
+
 
 
 function calculateLevy() {
@@ -146,7 +148,37 @@ function disabilityCheck() {
     }
 }
 
-calculate.addEventListener('click', function() {
-    console.log(calculateNetPay())
+function appendResults() {
+    let results = document.createElement('div')
+    results.classList.add('form-results')
+    formDetails.appendChild(results)
 
-})
+    let grossPayResult = document.createElement('div')
+    grossPayResult.classList.add('gross-pay-result')
+
+    let nssfResult = document.createElement('div')
+    nssfResult.classList.add('nssf-result')
+
+    let incomeTaxResult = document.createElement('div')
+    incomeTaxResult.classList.add('income-tax-result')
+
+    let nhifResult = document.createElement('div')
+    nhifResult.classList.add('nhif-result')
+
+    let housingLevyResult = document.createElement('div')
+    housingLevyResult.classList.add('housing-Levy-result')
+
+    let netPayResult = document.createElement('div')
+    netPayResult.classList.add('net-pay-result')
+
+    grossPayResult.innerHTML = `GROSS-PAY ${grossPay.value}`
+    nssfResult.innerHTML = `NSSF -${calculateNSSF()}`
+    incomeTaxResult.innerHTML = `INCOME TAX -${calculateIncomeTax()}`
+    nhifResult.innerHTML = `NHIF -${calculateNHIF()}`
+    housingLevyResult.innerHTML = `HOUSING LEVY -${calculateLevy()}`
+    netPayResult.innerHTML = `NET PAY ${calculateNetPay()}`
+
+    results.append(grossPayResult, nssfResult, incomeTaxResult, nhifResult, housingLevyResult, netPayResult)
+}
+
+calculate.addEventListener('click', appendResults)
