@@ -158,36 +158,36 @@ function appendResults() {
     let grossPayDiv = document.createElement('div')
     grossPayDiv.classList.add('gross-pay-result')
     let grossPayResult = document.createElement('p')
-    grossPayResult.classList.add('gross-pay-value')
     let grossPayTitle = document.createElement('p')
+    grossPayTitle.classList.add('gross-pay-title')
     grossPayDiv.append(grossPayTitle, grossPayResult)
 
     let nssfDiv = document.createElement('div')
     nssfDiv.classList.add('nssf-result')
     let nssfResult = document.createElement('p')
-    nssfResult.classList.add('nssf-result-value')
     let nssfTitle = document.createElement('p')
+    nssfTitle.classList.add('nssf-result-title')
     nssfDiv.append(nssfTitle, nssfResult)
 
     let incomeTaxDiv = document.createElement('div')
     incomeTaxDiv.classList.add('income-tax-result')
     let incomeTaxResult = document.createElement('p')
-    incomeTaxResult.classList.add('income-tax-value')
     let incomeTaxTitle = document.createElement('p')
+    incomeTaxTitle.classList.add('income-tax-title')
     incomeTaxDiv.append(incomeTaxTitle, incomeTaxResult)
 
     let nhifDiv = document.createElement('div')
     nhifDiv.classList.add('nhif-result')
     let nhifResult = document.createElement('p')
-    nhifResult.classList.add('nhif-result-value')
     let nhifTitle = document.createElement('p')
+    nhifTitle.classList.add('nhif-result-title')
     nhifDiv.append(nhifTitle, nhifResult)
 
     let housingLevyDiv = document.createElement('div')
     housingLevyDiv.classList.add('housing-Levy-result')
     let housingLevyResult = document.createElement('p')
-    housingLevyResult.classList.add('housing-Levy-value');
     let housingLevyTitle = document.createElement('p')
+    housingLevyTitle.classList.add('housing-Levy-title');
     housingLevyDiv.append(housingLevyTitle, housingLevyResult)
 
     let netPayDiv = document.createElement('div')
@@ -195,6 +195,7 @@ function appendResults() {
     let netPayResult = document.createElement('p')
     netPayResult.classList.add('net-pay-value')
     let netPayTitle = document.createElement('p')
+    netPayTitle.classList.add('net-pay-title')
     netPayDiv.append(netPayTitle, netPayResult)
 
     grossPayTitle.innerHTML = 'GROSS-PAY '
