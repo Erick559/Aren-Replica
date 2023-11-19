@@ -143,13 +143,6 @@ function disabilityCheck() {
 }
 
 calculate.addEventListener('click', function() {
-    // let deductableLevy = calculateLevy()
-    // let netPay = grossPay.value - deductableLevy
-
-    // console.log(netPay)
-    // console.log(calculateNHIF())
-    // console.log(calculateNSSF())
-    // console.log(calculateIncomeTax())
     console.log(calculateNetPay())
 
 })
