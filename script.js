@@ -63,22 +63,11 @@ function calculateNSSF() {
     let nssfTier1 = document.querySelector('.nssf-tier1');
     let nssfTier1_2 = document.querySelector('.nssf-tier1-2')
     let nssf;
-    let error = document.querySelector('.error')
-    if (!error) {
-        error = document.createElement('p')
-        error.classList.add('error')
-    }
 
-    if (nssfTier1.checked == true && nssfTier1_2.checked == true) {
-        error.innerHTML = 'Please select only one'
-        form.appendChild(error);
-    } else if (nssfTier1.checked) {
+    if (nssfTier1.checked) {
         nssf = 360;
     } else if (nssfTier1_2.checked) {
         nssf = 1080;
-    } else {
-        error.innerHTML = 'Select one of the two tiers'
-        form.appendChild(error);
     }
 
     resetSelection.addEventListener('click', function() {
@@ -244,3 +233,17 @@ reset.addEventListener('click', function() {
         results.remove()
     }
 })
+
+const radioButtons = document.querySelectorAll('input[name="group"]');
+
+// Add a change event listener to each radio button
+radioButtons.forEach(function(radioButton) {
+    radioButton.addEventListener('change', function() {
+        // Uncheck all other radio buttons in the same group
+        radioButtons.forEach(function(otherRadioButton) {
+            if (otherRadioButton !== radioButton) {
+                otherRadioButton.checked = false;
+            }
+        });
+    });
+});
