@@ -122,7 +122,7 @@ function calculateIncomeTax() {
     // Ensure tax is non-negative
     tax = Math.max(tax, 0);
 
-    return tax.toFixed(2)
+    return parseFloat(tax.toFixed(2))
 
 }
 
@@ -149,6 +149,8 @@ function disabilityCheck() {
 }
 
 function appendResults() {
+    let displayedGrossPay = parseFloat(grossPay.value)
+
     let results = document.createElement('div')
     results.classList.add('form-results')
     formDetails.appendChild(results)
@@ -171,12 +173,12 @@ function appendResults() {
     let netPayResult = document.createElement('div')
     netPayResult.classList.add('net-pay-result')
 
-    grossPayResult.innerHTML = `GROSS-PAY ${grossPay.value}`
-    nssfResult.innerHTML = `NSSF -${calculateNSSF()}`
-    incomeTaxResult.innerHTML = `INCOME TAX -${calculateIncomeTax()}`
-    nhifResult.innerHTML = `NHIF -${calculateNHIF()}`
-    housingLevyResult.innerHTML = `HOUSING LEVY -${calculateLevy()}`
-    netPayResult.innerHTML = `NET PAY ${calculateNetPay()}`
+    grossPayResult.innerHTML = `GROSS-PAY ${displayedGrossPay.toLocaleString()}`
+    nssfResult.innerHTML = `NSSF -${calculateNSSF().toLocaleString()}`
+    incomeTaxResult.innerHTML = `INCOME TAX -${calculateIncomeTax().toLocaleString()}`
+    nhifResult.innerHTML = `NHIF -${calculateNHIF().toLocaleString()}`
+    housingLevyResult.innerHTML = `HOUSING LEVY -${calculateLevy().toLocaleString()}`
+    netPayResult.innerHTML = `NET PAY ${calculateNetPay().toLocaleString()}`
 
     results.append(grossPayResult, nssfResult, incomeTaxResult, nhifResult, housingLevyResult, netPayResult)
 }
