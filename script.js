@@ -177,7 +177,7 @@ function appendResults() {
     nhifDiv.classList.add('nhif-result')
     let nhifResult = document.createElement('p')
     let nhifTitle = document.createElement('p')
-    nhifDiv.appendChild(nhifTitle, nhifResult)
+    nhifDiv.append(nhifTitle, nhifResult)
 
     let housingLevyDiv = document.createElement('div')
     housingLevyDiv.classList.add('housing-Levy-result')
