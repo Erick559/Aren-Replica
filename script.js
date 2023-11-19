@@ -4,6 +4,7 @@ const reset = document.querySelector('.reset')
 const resetSelection = document.querySelector('.reset-checkbox')
 const form = document.querySelector('.form')
 const formDetails = document.querySelector('.form-details')
+const radioButtons = document.querySelectorAll('input[name="group"]');
 
 
 function getGrossPay() {
@@ -234,8 +235,6 @@ reset.addEventListener('click', function() {
     }
 })
 
-const radioButtons = document.querySelectorAll('input[name="group"]');
-
 // Add a change event listener to each radio button
 radioButtons.forEach(function(radioButton) {
     radioButton.addEventListener('change', function() {
@@ -247,3 +246,7 @@ radioButtons.forEach(function(radioButton) {
         });
     });
 });
+
+grossPay.addEventListener('click', function() {
+    grossPay.value = ''
+})
