@@ -215,6 +215,7 @@ function appendResults() {
 calculate.addEventListener('click', function() {
     // Check if the results are already present
     let results = document.querySelector('.form-results');
+    calculate.style.color = 'white'
 
     if (!results) {
         // If results are not present, append them
