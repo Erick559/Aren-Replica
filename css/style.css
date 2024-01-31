@@ -146,10 +146,10 @@ a:hover {
 }
 
 .amount input {
-    width: 22rem;
+    width: 15rem;
     height: 3.2rem;
     border: none;
-    margin-right: 1.5rem;
+    margin-right: 7rem;
     margin-bottom: 1.5rem;
     border-bottom: 3px solid #E7E8EC;
 }
