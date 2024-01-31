@@ -228,6 +228,7 @@ calculate.addEventListener('click', function() {
 
 reset.addEventListener('click', function() {
     grossPay.value = 0
+    calculate.style.color = 'black'
 
     let results = document.querySelector('.form-results')
 
